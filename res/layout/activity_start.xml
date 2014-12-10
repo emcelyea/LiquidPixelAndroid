@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+
+	<Button 
+	    android:id="@+id/start_simulator"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Start!!"
+	    android:onClick="startLastOneActivity"/>
+	    
+	<TextView
+	    android:id="@+id/instruction_text"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Select water particle size, max particles, number created on touch, and lifetime.\n Need at least 275 particles. Exceeding 5000 max particles may cause some lag.\n Recommended Ranges 1000-5000 max, 300-600 on touch."
+	    android:layout_below="@+id/start_simulator"/>
+	
+	<RadioGroup android:id="@+id/radiogroup"
+	    android:layout_below="@+id/instruction_text"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:text="particle size:">
+	    
+	    <RadioButton
+	        android:id="@+id/particle_small"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="small particles"/>
+	    
+	    <RadioButton
+	        android:id="@+id/particle_medium"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="medium particles"/>
+	    
+	    <RadioButton
+	        android:id="@+id/particle_large"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="large particles"/>
+	    
+	    <RadioButton
+	        android:id="@+id/particle_XL"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="extra large particles"/>
+	</RadioGroup>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/radiogroup"
+        android:text="Max Particle Count:"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/editTextParticleMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_below="@+id/textView1"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextParticleMax"
+        android:text="Particles created on Touch:"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/editTextParticleOnTouch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextParticleOnTouch"
+        android:text="Particle Lifetime(seconds):"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/editTextParticleLifetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:ems="10"
+        android:inputType="numberSigned" >
+
+        <requestFocus />
+    </EditText>
+	
+</RelativeLayout>
