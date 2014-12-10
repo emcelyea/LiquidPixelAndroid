@@ -10,13 +10,7 @@ Developers who want to use LiquidFun on android but not download and install SWI
 
 src>com.google.fpl.liquidfun package
 
-src>cpp package
-
-src>cpp.armeabi package
-
-src>cpp.mips package
-
-src>cpp.x86 package
+src>cpp folder (has 4 packages in it)
 
 libs>armeabi folder
 
